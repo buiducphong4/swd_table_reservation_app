@@ -58,7 +58,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         height: 60,
         decoration: BoxDecoration(
           color: status ? primaryColor : secondaryColor,
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(15),
         ),
         child: Center(
           child: Text(
