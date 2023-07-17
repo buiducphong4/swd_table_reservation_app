@@ -15,8 +15,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         backgroundColor: primaryBackgroundColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
+            const SizedBox(
+              height: 30,
+            ),
             const Center(
               child: Image(
                 image: AssetImage('assets/images/logo.png'),
@@ -24,13 +27,40 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 height: 180,
               ),
             ),
+            const SizedBox(
+              height: 50,
+              width: 250,
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'User name',
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            const SizedBox(
+              height: 50,
+              width: 250,
+              child: TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Password',
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
             // Rounded text button
             buildButton(false, 'Login'),
             TextButton(
               onPressed: () {},
               child: Container(
                 width: 200,
-                height: 60,
+                height: 40,
                 decoration: BoxDecoration(
                   color: primaryColor,
                   borderRadius: BorderRadius.circular(30),
@@ -55,7 +85,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       onPressed: () {},
       child: Container(
         width: 200,
-        height: 60,
+        height: 50,
         decoration: BoxDecoration(
           color: status ? primaryColor : secondaryColor,
           borderRadius: BorderRadius.circular(15),
